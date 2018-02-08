@@ -2,16 +2,21 @@ package com.tscode.lawyersreckoner.model;
 
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * 
  * @author Shree
  *
  */
+@Document(collection = "caseinfo")
 public class CaseInfo {
 
 	/**
 	 * id = casenumber+"_"+days;
 	 */
+	@Id
 	private String id;
 	
 	private String caseNumber;
@@ -24,6 +29,9 @@ public class CaseInfo {
 	
 	private String nextStage;
 	
+	/**
+	 * just a counter
+	 */
 	private int days;
 
 	public String getId() {

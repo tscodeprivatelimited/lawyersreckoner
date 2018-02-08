@@ -3,12 +3,17 @@
  */
 package com.tscode.lawyersreckoner.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * @author Shree
  *
  */
+@Document(collection = "case")
 public class Case {
 
+	@Id
 	private String id;
 	
 	private String caseNumber;
